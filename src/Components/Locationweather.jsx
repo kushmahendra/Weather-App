@@ -14,11 +14,11 @@ const Locationweather = ({
       <div className=' flex flex-row p-5 gap-1'>
         <h1 className='sm:text-8xl text-6xl'>{temperature}<sup className='sm:text-5xl text-3xl font-semibold relative' style={{ top: '-1em' }}>o</sup>
         </h1>
-        <div className='self-center'>
-          <h1 className='sm:text-5xl text-4xl '>{cityName}</h1>
-          <h1 className='text-center sm:text-lg text-sm'>{timestamp}</h1>
+        <div className='self-center  text-center'>
+          <h1 className='sm:text-5xl text-w-auto  text-4xl '>{cityName}</h1>
+          <h1 className=' sm:text-lg py-2 text-sm'>{timestamp}</h1>
         </div>
-        <i className="fa-solid fa-cloud sm:text-6xl text-4xl p-4"></i>
+        <i className="fa-solid fa-cloud sm:text-6xl  text-4xl p-"></i>
       </div>
     </div>
   );
