@@ -61,46 +61,39 @@ const Searchbar = () => {
   };
 
   return (
-    <div
-      className="  h-screen flex lg:flex-row flex-col w-screen"
-    >
-      <div className='w-full flex'>
-
+    <div className="  h-screen flex lg:flex-row flex-col w-screen">
+       <div className='w-full flex my-10'>
         <Locationweather {...weatherData} />
-      </div>
-      <div className='flex flex-col  lg:w-[30%] md:w-[40%] w-[50%] pt-5 absolute  z-50 top-0 right-0 gap-  '>
-        <div className='flex flex-row items-center'>
-          <input
-            type="search"
-            placeholder="Search Location"
-            value={city}
-            onChange={(e) => setCity(e.target.value)}
-            className="pl- text-lg bg-transparent text-white text-left w-full border-none placeholder-white outline-none"
-            onKeyPress={(e) => e.key === 'Enter' && Change()} // Allow Enter key to trigger search
-          />
-          <i
-            onClick={Change} // Trigger search on click
-            className="fa-solid fa-magnifying-glass text-2xl text-white mt-2 mr-2 cursor-pointer"
-          ></i>
+       </div>
+       <div className='flex flex-col  lg:w-[30%] md:w-[40%] w-[50%] m- absolute  z-50 top-0 right-0 gap-  '>
+            <div className='flex flex-row items-center text-center'>
+              <input
+               type="search"
+               placeholder="Search Location"
+               value={city}
+               onChange={(e) => setCity(e.target.value)}
+               className="pl-4 text-lg bg-transparent text-white text-left w-full border-none placeholder-white outline-none"
+               onKeyPress={(e) => e.key === 'Enter' && Change()} 
+              />
+              <i
+               onClick={Change} // Trigger search on click
+               className="fa-solid fa-magnifying-glass text-2xl text-white mt-1 mr-1 cursor-pointer"
+               ></i>
+            </div>
+            <hr className='w-full' />
         </div>
-
-        <hr className='w-full' />
-
-      </div>
-      <div className='  flex h-full justify-center  min-w-[30%] backdrop-blur items-center'>
-
-        <div className=" flex flex-col items-center  p-4 w-full">
-
-          {/* <hr className='w-full mt-8' /> */}
-          <Weatherdetails {...weatherData} />
-          <hr className='lg:w-full ' />
-          <Weatherforecast
-            tempMin={weatherData.tempMin}
-            time={weatherData.forecastTime}
-            conditionText={weatherData.forecastCondition}
-          />
+        <div className='  flex h-full justify-center  min-w-[30%] backdrop-blur items-center'>
+           <div className=" flex flex-col items-center  p-4 w-full">
+           {/* <hr className='w-full mt-8' /> */}
+           <Weatherdetails {...weatherData} />
+           <hr className='lg:w-full my-3' />
+           <Weatherforecast
+             tempMin={weatherData.tempMin}
+             time={weatherData.forecastTime}
+             conditionText={weatherData.forecastCondition}
+           />
+           </div>
         </div>
-      </div>
     </div>
 
   );

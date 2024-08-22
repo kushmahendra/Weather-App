@@ -8,7 +8,7 @@ const Locationweather = ({
 }) => {
   return (
     <div className='flex flex-col justify-between w-full lg:h-full lg:m-0 mb-40 h-full text-white'>
-      <div className='sm:text-3xl text-xl  m-2 '>
+      <div className='sm:text-3xl text-xl  m-1 pl-4 '>
         <h1>{country}</h1>
       </div>
       <div className=' flex flex-row p-5 gap-1'>
