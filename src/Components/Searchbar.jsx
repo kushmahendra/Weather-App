@@ -72,15 +72,15 @@ const Searchbar = () => {
                placeholder="Search Location"
                value={city}
                onChange={(e) => setCity(e.target.value)}
-               className="pl-4 text-lg bg-transparent text-white md:text- lg:text-  text-left w-full border-none placeholder-white outline-none"
+               className="pl-2 text-lg bg-transparent text-white md:text- lg:text-  text-left w-full border-none placeholder-white outline-none"
                onKeyPress={(e) => e.key === 'Enter' && Change()} 
               />
               <i
                onClick={Change} // Trigger search on click
-               className="fa-solid fa-magnifying-glass text-2xl text-white mt-1 sm:mr-1 mr-3 cursor-pointer"
+               className="fa-solid fa-magnifying-glass text-2xl text-white mt-1 sm:mr-1 mr-2 cursor-pointer"
                ></i>
             </div>
-            <hr className='w-full' />
+            <hr className='w-full border-gray-400' />
         </div>
         <div className='  flex h-full justify-center  min-w-[30%] backdrop-blur items-center'>
            <div className=" flex flex-col items-center  p-4 w-full">
