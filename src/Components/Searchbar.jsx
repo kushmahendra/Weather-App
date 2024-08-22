@@ -65,8 +65,8 @@ const Searchbar = () => {
        <div className='w-full flex my-10'>
         <Locationweather {...weatherData} />
        </div>
-       <div className='flex flex-col  lg:w-[30%] md:w-[40%] w-[50%] m- absolute  z-50 top-0 right-0 gap-  '>
-            <div className='flex flex-row items-center text-center'>
+       <div className='flex flex-col  lg:w-[30%] md:w-[40%] w-[50%] absolute  z-50 top-0 right-0  '>
+            <div className='flex flex-row items-center m-1 text-center'>
               <input
                type="search"
                placeholder="Search Location"
