@@ -12,9 +12,9 @@ const Weatherforecast = ({
       <div className='text-center font-semibold pl-6'> Today's Weather Forecast...
       </div>
       <div className='flex justify-start text-center py-6 gap-10'>
-         <i className="fa-solid fa-snowflake text-center  text-4xl justify-between"></i>
+         <i className="fa-solid fa-snowflake   text-3xl justify-between"></i>
          <div >
-                <h1 className=''>{time}</h1>
+                <h1>{time}</h1>
                 <h1 >{conditionText}</h1>
           </div>
           <h1 className='text-3xl'>{tempMin}<sup className='text-sm 'style={{ top: '-1em' }}>o</sup></h1>

@@ -65,19 +65,19 @@ const Searchbar = () => {
        <div className='w-full flex my-10'>
         <Locationweather {...weatherData} />
        </div>
-       <div className='flex flex-col  lg:w-[30%] md:w-[40%] w-[50%] absolute  z-50 top-0 right-0  '>
+       <div className='flex flex-col  lg:w-[30%] md:w-[40%] w-[100%] absolute  z-50 top-0 right-0  '>
             <div className='flex flex-row items-center m-1 text-center'>
               <input
                type="search"
                placeholder="Search Location"
                value={city}
                onChange={(e) => setCity(e.target.value)}
-               className="pl-4 text-lg bg-transparent text-white text-left w-full border-none placeholder-white outline-none"
+               className="pl-4 text-lg bg-transparent text-white md:text- lg:text-  text-left w-full border-none placeholder-white outline-none"
                onKeyPress={(e) => e.key === 'Enter' && Change()} 
               />
               <i
                onClick={Change} // Trigger search on click
-               className="fa-solid fa-magnifying-glass text-2xl text-white mt-1 mr-1 cursor-pointer"
+               className="fa-solid fa-magnifying-glass text-2xl text-white mt-1 sm:mr-1 mr-3 cursor-pointer"
                ></i>
             </div>
             <hr className='w-full' />
