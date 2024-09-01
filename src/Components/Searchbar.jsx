@@ -22,7 +22,7 @@ const Searchbar = () => {
 
   const Change = async () => {
     try {
-      const apiKey = '9b74c87d7dd343f59a6201937241908';
+      const apiKey = import.meta.env.VITE_API; 
       const url = `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&hours=1`;
 
       const response = await fetch(url);
